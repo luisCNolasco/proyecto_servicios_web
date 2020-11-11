@@ -1,0 +1,15 @@
+Veterinaria	- e-commerce y registro de mascotas
+	Casos de uso - Registro de mascotas
+		1. Generar perfil de mascota	|	Secretaria
+		2. Actualizar perfil de mascota	|	Secretaria
+		3. Generar boleta				|	Secretaria
+		4. Buscar perfil de mascota		|	Secretaria
+		5. Registrar producto			|	Secretaria/Veterinario
+		6. Actualizar producto			|	Secretaria/Veterinario
+		7. Buscar producto				|	Secretaria/Veterinario/Cliente
+		8. Eliminar producto			|	Secretaria/Veterinario
+		9.Iniciar sesión				|	Secretaria/Veterinario/Cliente
+		10.Generar perfil de dueño		|	Secretaria
+		11.Actualizar perfil de dueño	|	Secretaria
+		12.Buscar perfil de dueño		|	Secretaria
+		13.Eliminar perfil de dueño		|	Secretaria
