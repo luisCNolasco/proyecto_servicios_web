@@ -20,3 +20,33 @@ Create table Usuario(
 
 Insert into Usuario values('VET_FRANCO', '123', 1)
 Insert into Usuario values('SEC_LUISA', 'copito', 2)
+
+-- Tabla Tipo Mascota
+Create table Tipo_Mascota(
+	id_tipo_masc	int	primary key identity(1,1),
+	nom_tipo_masc	varchar(10) not null
+);
+Insert into Tipo_Mascota values ("Perros");
+Insert into Tipo_Mascota values ("Gatos");
+Insert into Tipo_Mascota values ("Roedores");
+Insert into Tipo_Mascota values ("Aves");
+Insert into Tipo_Mascota values ("Peces");
+
+-- Tabla Mascota
+Create table Mascota(
+	id_masc			int 		primary key identity(1,1),
+	id_tipo_masc		int		not null,
+	nom_masc		varchar(50) 	not null,
+	edad_masc		int 		not null,
+	dueño			varchar(50)	not null,
+	constraint FK_TipoMascota foreign key (id_tipo_masc) references Tipo_Mascota(id_tipo_masc)
+);
+
+-- Tabla Servicios
+Create table Servicios(
+	id_serv		int		primary key identity(1,1),
+	nom_serv	varchar(75)	not null
+);
+Insert into Servicios values ("Consulta");
+Insert into Servicios values ("Delivery");
+Insert into Servicios values ("Cirugía");
