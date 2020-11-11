@@ -32,14 +32,22 @@ Insert into Tipo_Mascota values ("Roedores");
 Insert into Tipo_Mascota values ("Aves");
 Insert into Tipo_Mascota values ("Peces");
 
+-- Tabla Dueño
+Create table Dueño(
+	id_dueño	int		primary key identity(1,1),
+	nom_dueño	varchar(50)	not null,
+	tel_dueño	int
+);
+
 -- Tabla Mascota
 Create table Mascota(
 	id_masc			int 		primary key identity(1,1),
 	id_tipo_masc		int		not null,
+	id_dueño		int		not null,
 	nom_masc		varchar(50) 	not null,
 	edad_masc		int 		not null,
-	dueño			varchar(50)	not null,
-	constraint FK_TipoMascota foreign key (id_tipo_masc) references Tipo_Mascota(id_tipo_masc)
+	constraint FK_TipoMascota foreign key (id_tipo_masc) references Tipo_Mascota(id_tipo_masc),
+	constraint FK_Dueño foreign key (id_dueño) references Dueño(id_dueño)
 );
 
 -- Tabla Servicios
